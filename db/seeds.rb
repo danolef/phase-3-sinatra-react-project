@@ -8,7 +8,7 @@ user1 = User.create(name: "Dan")
 
 puts "creating climbs"
 
-user = User.find_by(name= "Dan")
+user = User.find_by(name: "Dan")
 
 epinephrine = Climb.create(user_id: user, name: "Epinephrine", grade: "5.9", climb_type: "Trad", location: "Red Rocks, Nevada", mt_project_link: "https://www.mountainproject.com/route/105732422/epinephrine")
 casualRoute = Climb.create(user_id: user, name: "Casual Route", grade: "5.10a", climb_type: "Trad", location: "RMNP, Colorado", mt_project_link: "https://www.mountainproject.com/route/105748496/casual-route")
@@ -26,11 +26,11 @@ theFlow = Climb.create(user_id: user, name: "The Flow", grade: "V7", climb_type:
 puts "seeding Tick List"
 climb = Climb.ids.sample
 
-t1= TickList.create(user_id: user, climb_id: climb, completed: false, beta: "" )
-t2= TickList.create(user_id: user, climb_id: climb, completed: false, beta: "" )
-t3= TickList.create(user_id: user, climb_id: climb, completed: false, beta: "" )
-t4= TickList.create(user_id: user, climb_id: climb, completed: false, beta: "" )
-t5= TickList.create(user_id: user, climb_id: climb, completed: false, beta: "" )
-t6= TickList.create(user_id: user, climb_id: climb, completed: false, beta: "" )
+t1= TickList.create(user_id: User.ids.sample, climb_id: Climb.ids.sample, completed: false, beta: "" )
+t2= TickList.create(user_id: User.ids.sample, climb_id: Climb.ids.sample, completed: false, beta: "" )
+t3= TickList.create(user_id: User.ids.sample, climb_id: Climb.ids.sample, completed: false, beta: "" )
+t4= TickList.create(user_id: User.ids.sample, climb_id: Climb.ids.sample, completed: false, beta: "" )
+t5= TickList.create(user_id: User.ids.sample, climb_id: Climb.ids.sample, completed: false, beta: "" )
+t6= TickList.create(user_id: User.ids.sample, climb_id: Climb.ids.sample, completed: false, beta: "" )
 
 puts "✅ Done seeding!"
